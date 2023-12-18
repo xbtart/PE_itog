@@ -13,7 +13,7 @@ pip install -r requirements.txt
 2. Запустите сервер с помощью команды:
 
 ```bash
-uvicorn main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 ## API endpoints
@@ -45,10 +45,11 @@ curl -X POST -H "Content-Type: application/json; charset=utf-8" -d "{\"text\": \
 import requests
 
 text = "Я очень удивлен происходящим!"
-url = "http://127.0.0.1:8000/predict?text="+text
-payload = {"text": text}
+url = "http://127.0.0.1:8000/predict"
 
+payload = {"text": text}
 response = requests.post(url, json=payload)
+
 print(response.json())
 ```
 
