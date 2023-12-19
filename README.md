@@ -28,7 +28,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 Пример запроса:
 ```bash
-curl -X POST -H "Content-Type: application/json; charset=utf-8" -d "{\"text\": \"Я очень удивлен происходящим!\"}" http://127.0.0.1:8000/predict
+curl -X POST -H "Content-Type: application/json; charset=utf-8" -d "{\"text\": \"Я очень удивлен происходящим!\"}" http://xbondteam.ru:8000/predict
 ```
 
 Пример успешного ответа:
