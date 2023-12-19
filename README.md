@@ -1,4 +1,4 @@
-# Итоговый проект - Веб-приложение для эмоционального анализа текста
+# Итоговый проект - Веб-приложение для эмоционального анализа текста на основе RuBERT
 
 Это веб-приложение использует FastAPI для создания REST API, которое позволяет анализировать эмоциональный тон текстов с использованием модели `cointegrated/rubert-tiny2-cedr-emotion-detection`. 
 
@@ -53,14 +53,13 @@ response = requests.post(url, json=payload)
 print(response.json())
 ```
 
-## Требования
-
-- fastapi==0.68.1
-- torch==1.9.0
-- transformers==4.10.2
-- requests==2.26.0
-- httpx==0.19.0
-- pytest==7.0.1
+## Зависимости
+- fastapi
+- transformers
+- torch
+- pydantic
+- decimal
+- requests
 
 ## Запуск тестов
 
