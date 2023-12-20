@@ -14,7 +14,7 @@ tokenizer = AutoTokenizer.from_pretrained("cointegrated/rubert-tiny2-cedr-emotio
 
 emotion_labels = ["грусть", "радость", "злость", "страх", "удивление"]
 
-@app.post("/predict")
+@app.post("/predict/")
 def predict(text_data: TextData):
     text = text_data.text
     inputs = tokenizer(text, return_tensors="pt")
@@ -33,3 +33,7 @@ def predict(text_data: TextData):
     }
 
     return response
+
+@app.get("/")
+def root():
+    return {"message": "Hello World"}
